@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: VadarodTest
+
+  datasource:
+    url: jdbc:h2:mem:vadarod_test
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+nbrb:
+  url: https://api.nbrb.by/exrates
+
+logging:
+  level:
+    org.anton.vadarodtest: DEBUG
+    feign: DEBUG
