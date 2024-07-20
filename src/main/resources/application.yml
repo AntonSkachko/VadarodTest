@@ -16,7 +16,7 @@ spring:
 nbrb:
   url: https://api.nbrb.by/exrates
 
-logging:
-  level:
-    org.anton.vadarodtest: DEBUG
-    feign: DEBUG
+#logging:
+#  level:
+#    org.anton.vadarodtest: DEBUG
+#    feign: DEBUG

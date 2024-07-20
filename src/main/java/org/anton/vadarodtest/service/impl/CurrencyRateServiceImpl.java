@@ -27,6 +27,14 @@ public class CurrencyRateServiceImpl implements CurrencyRateService {
     private final NbrbClient nbrbClient;
     private final CurrencyRateMapper currencyRateMapper;
 
+    /**
+     * Загружает курсы валют за указанную дату.
+     *
+     * @param date дата, для которой загружаются курсы валют
+     * @return true, если данные успешно загружены
+     * @throws NbrbCurrencyRateNotFoundException если не найдены курсы валют на указанную дату
+     */
+
     @Override
     public boolean loadRatesByDate(LocalDate date) {
         List<CurrencyRateRequest> rates = getCurrencyRateRequestsByDate(date);
@@ -34,11 +42,28 @@ public class CurrencyRateServiceImpl implements CurrencyRateService {
         return true;
     }
 
+    /**
+     * Получает курсы валют за указанную дату.
+     *
+     * @param date дата, для которой запрашиваются курсы валют
+     * @return список курсов валют
+     * @throws ResourceNotFoundException если не найдены курсы валют на указанную дату
+     */
+
     @Override
     public List<CurrencyRateResponse> getRatesByDate(LocalDate date) {
         return currencyRateMapper
                 .toResponseList(getCurrencyRatesByDate(date));
     }
+
+    /**
+     * Получает курс валюты за указанную дату и сокращение валюты.
+     *
+     * @param date         дата, для которой запрашивается курс валюты
+     * @param abbreviation сокращение валюты (например, "USD")
+     * @return информация о курсе валюты
+     * @throws ResourceNotFoundException если не найден курс валюты на указанную дату и сокращение
+     */
 
     @Override
     public CurrencyRateResponse getRateByDateAndCurAbbreviation(

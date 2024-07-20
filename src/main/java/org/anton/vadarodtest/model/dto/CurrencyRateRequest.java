@@ -3,11 +3,13 @@ package org.anton.vadarodtest.model.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class CurrencyRateRequest {
     @JsonProperty("Cur_Id")
     private long curId;
