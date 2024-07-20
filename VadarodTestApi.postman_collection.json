@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "20265911-c872-407a-8ae7-a5db408713e7",
+		"name": "VadarodTestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36479322"
+	},
+	"item": [
+		{
+			"name": "fillDb",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "takeCurrency",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -18,7 +18,7 @@
     ```mvn spring-boot:run```
 
 ### API
-Api можно посмотреть через swagger ```http://localhost:8080/swagger-ui/index.html```, ну или поверить на слово, что тут написано
+Api можно посмотреть через swagger ```http://localhost:8080/swagger-ui/index.html```, ну или поверить на слово, что тут написано.
 1.  Получение курсов валют за выбранную дату
     * Endpoint ```GET /api/v1/rates?date=YYYY-MM-DD```
     * Параметры `date` (обязательный) - дата в формате `YYYY-MM-DD`
@@ -36,3 +36,6 @@ Api можно посмотреть через swagger ```http://localhost:8080/
 
 ### История взаимодействия Git
 Про это я увидел в самом конце, так что не судите строго.
+
+### Коллекция запросов через Postman
+Ссылка на [коллекцию запросов](VadarodTestApi.postman_collection.json) в Postman
